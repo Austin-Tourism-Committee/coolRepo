@@ -9,7 +9,7 @@ L.tileLayer(
 
 //This function creates a box with 100 random points via in it.
 //Then the Voroni algorithm is used to created polygons around the points.
-function threePointBuffer() {
+function createVoroniPolygons() {
   //Creates a box named borderBox that will be used as a boundary for the points
   // to be generated in and for the voroni polygons to be made in.
   const borderBox = {
