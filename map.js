@@ -7,6 +7,7 @@ L.tileLayer(
     maxZoom: 18,
     }).addTo(map);
 
+
 //This function creates a box with 10 random points via in it.
 //Then the Voroni algorithm is used to created polygons around the points.
 function createVoroniPolygons() {
@@ -71,7 +72,22 @@ function addPolygon() {
 }
 
 
+function marissaFunction() {
+  // Define a custom purple icon
+    var purpleIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    // Add a purple marker to the map
+    var marker = L.marker([29.8884, -97.9384], { icon: purpleIcon }).addTo(map);
+}
 
 createVoroniPolygons();
 kaiFunction();
 addPolygon();
+marissaFunction();
